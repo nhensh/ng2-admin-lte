@@ -43,10 +43,11 @@ export class AppComponent implements OnInit {
 
         // defining some test users
         let user1 = new User( {
-            avatarUrl: 'public/assets/img/user2-160x160.jpg',
-            email: 'weber.antoine.pro@gmail.com',
-            firstname: 'WEBER',
-            lastname: 'Antoine'
+            // To Do: Use Gravatar or have ability to add image
+            avatarUrl: 'https://en.gravatar.com/userimage/40369509/6556a9c552d619e24a51d0687873df2c.png',
+            email: 'nathan.hensher@profilefinancial.co.uk',
+            firstname: 'Nathan',
+            lastname: 'Hensher'
         });
         let user2 = new User( {
             avatarUrl: 'public/assets/img/user2-160x160.jpg',
@@ -69,8 +70,8 @@ export class AppComponent implements OnInit {
             'link': ['/client']
           },
           {
-            'title': 'Sub menu',
-            'icon': 'link',
+            'title': 'Website',
+            'icon': 'window-maximize',
             'sublinks': [
               {
                 'title': 'Page 2',
@@ -83,9 +84,9 @@ export class AppComponent implements OnInit {
             ]
           },
           {
-            'title': 'External Link',
-            'icon': 'google',
-            'link': ['http://google.com'],
+            'title': 'Profile Financial',
+            'icon': 'window-restore',
+            'link': ['https://www.profilefinancial.co.uk/'],
             'external': true,
             'target': '_blank'
           },
@@ -114,9 +115,9 @@ export class AppComponent implements OnInit {
         // sending a test message
         this.msgServ.addMessage( new Message( {
             author: user2,
-            content: 'le contenu d\'un message d\'une importance extreme',
+            content: 'important information to send you',
             destination: user1,
-            title: 'un message super important'
+            title: 'Important Message'
         }) );
     }
 

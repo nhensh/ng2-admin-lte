@@ -8,13 +8,19 @@ import { BreadcrumbService } from '../../services/breadcrumb.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   public date: Date = new Date();
-
+ 
   constructor(private breadServ: BreadcrumbService) {
     // TODO
   }
 
   public ngOnInit() {
     // setttings the header for the home
+    this.date =  new Date(); 
+
+    setInterval(() => {
+        this.date =  new Date();
+     }, 1000);
+
     this.breadServ.set({
       description: 'HomePage',
       display: true,

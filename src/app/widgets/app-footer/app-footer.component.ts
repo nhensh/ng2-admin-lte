@@ -6,8 +6,13 @@ import { Component, Input } from '@angular/core';
     templateUrl: './app-footer.component.html'
 })
 export class AppFooterComponent {
+    public date: Date = new Date();
 
     constructor() {
       // TODO
     }
+
+     public ngOnInit() {
+        this.date =  new Date(); 
+     }
 }
